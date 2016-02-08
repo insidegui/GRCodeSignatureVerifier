@@ -8,6 +8,47 @@ GRCodeSignatureVerifier can be used to check if an app has been tampered with by
 
 [Read the docs](http://cocoadocs.org/docsets/GRCodeSignatureVerifier).
 
+## Example
+
+### Swift
+```swift
+let verifier = GRCodeSignatureVerifier.sharedInstance()
+	
+// requirements are optional, but they make the verification stronger
+verifier.codeRequirements = "identifier = \"com.yourcompany.AppName\""
+	
+if !verifier.isSignatureValid {
+	NSLog("The app was modified. Exiting... \(verifier.validationError)")
+	exit(1)
+}
+```
+
+### Objective-C
+```objc
+GRCodeSignatureVerifier *verifier = [GRCodeSignatureVerifier sharedInstance];
+
+verifier.codeRequirements = @"identifier = \"com.yourcompany.AppName\"";
+
+if (!verifier.isSignatureValid) {
+	NSLog("The app was modified. Exiting... %@", verifier.validationError);
+	exit(1);
+}
+```
+## Precompiled code requirements
+
+You can use the tool `csreq` to compile code requirements:
+
+```shell
+$ csreq -r requirements.txt -b requirements.bin
+```
+
+To use precompiled code requirements you set the `codeRequirementsData` property:
+
+```objc
+verifier.codeRequirementsData = [NSData dataWithContentsOfFile:@"/path/to/requirements.bin"];
+```
+To learn more about what are code requirements and the code requirements language, [check out this document from Apple](https://developer.apple.com/library/mac/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html#//apple_ref/doc/uid/TP40005929-CH5-SW1).
+
 ## Installing
 
 ### Using CocoaPods:
