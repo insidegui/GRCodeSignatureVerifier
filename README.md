@@ -16,7 +16,7 @@ Add a `Podfile` that contains at least the following information to the root of 
 If you're unfamiliar with CocoaPods, read [using CocoaPods](http://guides.cocoapods.org/using/using-cocoapods.html).
 
 ```ruby
-platform :osx
+platform :osx, "10.11"
 pod 'GRCodeSignatureVerifier'
 use_frameworks!
 ```
