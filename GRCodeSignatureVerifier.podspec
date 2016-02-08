@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GRCodeSignatureVerifier"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "GRCodeSignatureVerifier can be used to check if an app has been tampered with by verifying It's code signature."
   s.description  = <<-DESC
                     Simple code signature verification for OS X apps.
