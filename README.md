@@ -6,7 +6,7 @@ If you want to support my open source projects financially, you can do so by pur
 
 Simple code signature verification for macOS apps.
 
-GRCodeSignatureVerifier can be used to check if an app has been tampered with by verifying It's code signature.
+GRCodeSignatureVerifier can be used to check if an app has been tampered with by verifying its code signature.
 
 [See demo app to learn more](https://github.com/insidegui/GRCodeSignatureVerifierDemo).
 
@@ -79,7 +79,7 @@ Just download the code and add `GRCodeSignatureVerifier.framework` to the `Embed
 
 #### Directly
 
-Alternatively, you can just drop `GRCodeSignatureVerifier.h` and `GRCodeSignatureVerifier.m` in your app and use It directly.
+Alternatively, you can just drop `GRCodeSignatureVerifier.h` and `GRCodeSignatureVerifier.m` in your app and use it directly.
 
 ## ❤️
 
