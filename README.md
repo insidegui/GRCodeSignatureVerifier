@@ -1,6 +1,10 @@
+If you want to support my open source projects financially, you can do so by purchasing a copy of [BrowserFreedom](https://getbrowserfreedom.com), [Mediunic](https://itunes.apple.com/app/mediunic-medium-client/id1088945121?mt=12) or sending Bitcoin to `3DH9B42m6k2A89hy1Diz3Vr3cpDNQTQCbJ` 😁
+
 # GRCodeSignatureVerifier
 
-Simple code signature verification for OS X apps.
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/cocoapods/v/GRCodeSignatureVerifier.svg)]()
+
+Simple code signature verification for macOS apps.
 
 GRCodeSignatureVerifier can be used to check if an app has been tampered with by verifying It's code signature.
 
@@ -51,15 +55,20 @@ To learn more about what are code requirements and the code requirements languag
 
 ## Installing
 
+### Using Carthage:
+
+```
+github "insidegui/GRCodeSignatureVerifier" ~> 1.0
+```
+
 ### Using CocoaPods:
 
-Add a `Podfile` that contains at least the following information to the root of your app project, then do `pod install`.
 If you're unfamiliar with CocoaPods, read [using CocoaPods](http://guides.cocoapods.org/using/using-cocoapods.html).
 
+Add the following line to your `Podfile`:
+
 ```ruby
-platform :osx, "10.11"
 pod 'GRCodeSignatureVerifier'
-use_frameworks!
 ```
 
 ### Manually
